@@ -1,0 +1,23 @@
+<!--raspberry pi apache2 webserver setup: hosted as index.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false">
+</script>
+<script>
+var myCenter=new google.maps.LatLng(
+40.006694099999997, -105.2635152
+ )
+var marker;function initialize(){var mapProp = {  center:myCenter,  zoom:15,  mapTypeId:google.maps.MapTypeId.ROADMAP  };
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+marker=new google.maps.Marker({   position:myCenter,   animation:google.maps.Animation.BOUNCE   });
+marker.setMap(map);} google.maps.event.addDomListener(window, "load", initialize);
+setTimeout(function(){ window.location.reload(1); }, 10000);
+</script>
+</head>
+<body>
+<div id="googleMap" style="width:1024px;height:780px;">
+</div>
+</body>
+</html>
