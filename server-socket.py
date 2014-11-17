@@ -7,6 +7,6 @@ sock.listen(2)
 
 while True:
 	gpsdata = client.recv(1204)
-	file =open("file2","w")
+	file = open("file2","w")
 	file.write(gpsdata)
 	file.close()
